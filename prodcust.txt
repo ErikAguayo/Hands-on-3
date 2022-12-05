@@ -1,0 +1,25 @@
+C:\Users\geist\Desktop\CLIPSJNI>java -jar CLIPSJNI.jar
+         CLIPS (6.31 5/19/15)
+CLIPS> (load load-prod-cust.clp)
+Defining deftemplate: product
+Defining deffacts: products
+Defining deftemplate: customer
+Defining deffacts: customers
+TRUE
+CLIPS> (load load-prodcust-rules.clp)
+Defining defrule: my-rule11 +j+j
+Defining defrule: my-rule12
+[PRCCODE3] Undefined variable c.name referenced in RHS of defrule.
+Defining defrule: my-rule13 +j+j
+Defining defrule: my-rule14
+Defining defrule: my-rule15
+CLIPS> (load run-prodcust.clp)
+[CSTRCPSR1] Expected the beginning of a construct.
+FALSE
+CLIPS> (reset)
+CLIPS> (run)
+Customer name found:bob
+Customer name found:mary
+Electronic product found: Speakers
+Electronic product found: Amplifier
+CLIPS>

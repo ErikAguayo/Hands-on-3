@@ -1,0 +1,53 @@
+         CLIPS (6.31 5/19/15)
+CLIPS> (facts)
+f-0     (initial-fact)
+For a total of 1 fact.
+CLIPS> (rules)
+CLIPS> (load templates.clp)
+Defining deftemplate: customer
+Defining deftemplate: product
+Defining deftemplate: order
+Defining deftemplate: line-item
+TRUE
+CLIPS> (load persons.clp)
+
+[CSTRCPSR1] Expected the beginning of a construct.
+Defining defrule: r1 +j+j
+Defining defrule: r2 +j+j
+Defining defrule: r3 +j+j
+Defining defrule: r4 +j+j
+
+[CSTRCPSR1] Expected the beginning of a construct.
+FALSE
+CLIPS> (load facts.clp)
+Defining deffacts: products
+Defining deffacts: customers
+Defining deffacts: orders
+Defining deffacts: items-list
+TRUE
+CLIPS> (load rules.clp)
+Defining defrule: cust-not-buying +j+j+j
+Defining defrule: prods-bought +j+j+j+j
+Defining defrule: prods-qty-bgt =j=j=j+j
+Defining defrule: customer-shopping =j+j+j+j+j
+Defining defrule: cust-5-prods
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for deftemplate patterns.
+
+ERROR:
+(defrule MAIN::cust-5-prods
+   (customer (customer-id ?id) (name ?cn))
+   (order (order-number ?order) (customer-id ?id))
+   (line-item (order-number ?order) (part-number ?part) {quantity
+Defining defrule: text-cust =j=j+j
+Defining defrule: call-cust =j=j+j
+FALSE
+CLIPS> (reset)
+CLIPS> (run)
+Amplifier was bought
+10 Amplifier was/were bought
+bob bought  Amplifier
+USBMem was bought
+1 USBMem was/were bought
+mary bought  USBMem
+joe no ha comprado... nada!
+joe 3313073905 tienes 25% desc prox comprajoe 3313073905 tienes 25% desc prox compraCLIPS>

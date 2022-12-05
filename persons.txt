@@ -1,0 +1,55 @@
+C:\Users\geist\Desktop\CLIPSJNI>java -jar CLIPSJNI.jar
+         CLIPS (6.31 5/19/15)
+CLIPS> (load load-persons-clp)
+[ARGACCES2] Function load was unable to open file load-persons-clp.
+FALSE
+CLIPS> (load load-persons-clp)
+[ARGACCES2] Function load was unable to open file load-persons-clp.
+FALSE
+CLIPS> (load load-persons.clp)
+Defining deftemplate: person
+Defining deffacts: partnership
+TRUE
+CLIPS> (facts)
+f-0     (initial-fact)
+For a total of 1 fact.
+CLIPS> (reset)
+CLIPS> (facts)
+f-0     (initial-fact)
+f-1     (person (name Fred) (gender male) (age 26) (partner Susan))
+f-2     (person (name Susan) (gender female) (age 24) (partner Fred))
+f-3     (person (name Andy) (gender male) (age 25) (partner Sara))
+f-4     (person (name Alice) (gender female) (age 23) (partner Bob))
+For a total of 5 facts.
+CLIPS> (load load-persons-rules.clp)
+Defining defrule: my-rule1 +j+j
+Defining defrule: my-rule2 =j+j
+Defining defrule: my-rule3 +j+j
+Defining defrule: my-rule4 =j+j
+Defining defrule: my-rule5 =j+j
+TRUE
+CLIPS> (rules)
+my-rule1
+my-rule2
+my-rule3
+my-rule4
+my-rule5
+For a total of 5 defrules.
+CLIPS> (run)
+<Fact-2> is female
+<Fact-4> is female
+Bob is Alice's partner
+Sara is Andy's partner
+Fred is Susan's partner
+Susan is Fred's partner
+Alice is female
+Susan is female
+26
+24
+25
+23
+Alice
+Andy
+Susan
+Fred
+CLIPS>
